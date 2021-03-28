@@ -1,5 +1,3 @@
-// components/QuestionSection/index.js
-
 import React from "react";
 import styled from "styled-components";
 import { QUIZZES } from "../../contents";
@@ -23,12 +21,20 @@ const QuestionTitle = styled.div`
     font-weight: 600;
 `;
 
+const StyledImage = styled.img`
+    border-radius: 16px;
+    opacity: 80%;
+    margin-bottom: 16px;
+    max-width: 100%;
+    display: block;
+`;
 
-const QuestionSection = ({currentNo}) => (
+const QuestionSection = ({currentNo,props}) => (
     <QuestionSectionWrapper>
         <PageLabel>
             <span>{QUIZZES[currentNo].id}</span>/{QUIZZES.length}
         </PageLabel>
+        <StyledImage src={QUIZZES[currentNo].image} />
         <QuestionTitle>{QUIZZES[currentNo].question}</QuestionTitle>
     </QuestionSectionWrapper>
 );

@@ -10,7 +10,7 @@ const FlexBox = styled.div`
 
 // App.css에서 app class에 적용되던 CSS 가져옴
 const ContainerWrapper = styled.div`
-    width: 400px;
+    width: 450px;
     margin-top: 72px;
 `;
 
