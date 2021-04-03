@@ -1,15 +1,14 @@
-import { Link } from "react-router-dom";
-import { QUIZZES } from "../../contents";
 import { Button, ResultSection, Container } from "components";
+import { useParams } from "react-router";
 
-const Result = ({ score, setScore }) => {
-	const convertedScore = Math.floor((score / QUIZZES.length) * 100);
+const Result = ({ setScore }) => {
+	const { cCode } = useParams();
 	return (
 		<Container>
-			<ResultSection convertedScore={convertedScore}></ResultSection>
-			<Link to="/">
-				<Button onClick={() => setScore(0)}>테스트 다시하기</Button>
-			</Link>
+			<ResultSection cCode={cCode}></ResultSection>
+			<Button onClick={() => setScore(0)} to="/">
+				테스트 다시하기
+			</Button>
 		</Container>
 	);
 };

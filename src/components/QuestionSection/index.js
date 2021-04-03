@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { QUIZZES } from "../../contents";
+import { QUIZZES } from "contents";
 
 // .question-section에 해당하는 CSS를 가져옴
 const QuestionSectionWrapper = styled.div`

@@ -1,25 +1,44 @@
+
 import React from "react";
 import styled from "styled-components";
+import RESULT from "./Result";
+import { SocialButtonGroup } from "components";
 
-const RecultTitle = styled.h1`
-    font-size: 64px;
-    font-weight: bold;
-    margin-bottom: 8px;
-    text-align: center;
+const SectionTitle = styled.h1`
+	font-size: 64px;
+	font-weight: bold;
+	margin-top: 0px;
+	text-align: center;
 `;
 
-const Score = styled.p`
-    font-size: 192px;
-    margin:40px;
-    text-align: center;
-    color: ${(props) => props.theme.primaryColor100};
+const StyledImage = styled.img`
+	border-radius: 16px;
+	opacity: 80%;
+	max-width: 100%;
+	display: block;
+    margin-left: 28px;
 `;
 
-const ResultSection = ({ convertedScore }) => (
-    <>
-        <RecultTitle>당신의 점수는?</RecultTitle>
-        <Score>{convertedScore}</Score>
-    </>
+const ResultTitle = styled.div`
+	font-size: 24px;
+	margin-bottom: 20px;
+	text-align: center;
+`;
+
+const ResultContant = styled.div`
+    font-size: 13px;
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 20px;
+`;
+
+const ResultSection = ({ cCode }) => (
+	<>
+		<SectionTitle>당신은 혹시?</SectionTitle>
+		<StyledImage src={RESULT[cCode].src} />
+		<ResultTitle>{RESULT[cCode].title}</ResultTitle>
+        <SocialButtonGroup></SocialButtonGroup>
+        <ResultContant>{RESULT[cCode].Contents}</ResultContant>
+	</>
 );
-
 export default ResultSection;

@@ -2,9 +2,8 @@
 
 import React from "react";
 import styled from "styled-components";
-// QUIZZES를 사용하기 위해 import 해왔습니다.
-import { QUIZZES } from "../../contents";
-import Button from "../Button";
+import { QUIZZES } from "contents";
+import { Button } from "components";
 
 // answer-section에 해당하는 스타일을 가져옴
 const AnswerGroupWrapper = styled.div`
