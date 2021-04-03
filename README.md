@@ -4,7 +4,7 @@
 
 ## 프로젝트 시작
 ```properties
-$ npx create-react-app t-post
+$ npx create-react-app soccer-test
 ```
 ## gitmoji-cli 사용하기
 
