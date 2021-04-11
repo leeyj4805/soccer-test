@@ -15,11 +15,11 @@ function App() {
 
 	return (
 		<ThemeProvider theme={theme}>
-			<GlobalStyle />
 			 <Helmet>
     			<title>나와 잘 맞는 축구팀은?</title>
 				<link rel="icon" href={favicon} />
             </Helmet>
+			<GlobalStyle />
 			<Router>
 				<Route path="/result/:cCode">
 					 <Result setScore={setScore} />

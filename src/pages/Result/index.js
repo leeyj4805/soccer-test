@@ -9,19 +9,19 @@ const Result = ({ setScore }) => {
 	return (
 		<>
 		<Helmet>
-			<meta property="og:url" content={currentUrl} />
-			<meta property="og:title" content={RESULT[cCode]["ogTitle"]} />
-			<meta
-				property="og:description"
-				content={RESULT[cCode]["ogDescription"]}
-			/>
-			<meta property="og:image" content={RESULT[cCode]["ogImage"]} />
-			<meta name="twitter:title" content={RESULT[cCode]["ogTitle"]} />
-			<meta
-				name="twitter:description"
-				content={RESULT[cCode]["ogDescription"]}
-			/>
-			<meta name="twitter:image" content={RESULT[cCode]["ogImage"]} />
+                <meta property="og:url" content={currentUrl} />
+                <meta property="og:title" content={RESULT[cCode]["ogTitle"]} />
+                <meta
+                    property="og:description"
+                    content={RESULT[cCode]["ogDescription"]}
+                />
+                <meta property="og:image" content={RESULT[cCode]["ogImage"]} />
+                <meta name="twitter:title" content={RESULT[cCode]["ogTitle"]} />
+                <meta
+                    name="twitter:description"
+                    content={RESULT[cCode]["ogDescription"]}
+                />
+                <meta name="twitter:image" content={RESULT[cCode]["ogImage"]} />
         </Helmet>
 		<Container>
 			<ResultSection cCode={cCode}></ResultSection>
